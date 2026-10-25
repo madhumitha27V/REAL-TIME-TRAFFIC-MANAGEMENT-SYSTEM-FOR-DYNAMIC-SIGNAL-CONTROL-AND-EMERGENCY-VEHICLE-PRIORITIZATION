@@ -1,0 +1,11 @@
+image,cars,motorcycles,buses,trucks,total_vehicles,status,raw_response
+test1.jpeg,2,0,1,0,3,success,
+test10.jpg,67,0,2,1,70,success,
+test2.jpg,16,2,0,1,19,success,
+test3.jpg,7,0,0,5,12,success,
+test4.jpg,23,0,1,1,25,success,
+test5.jpg,32,0,3,3,38,success,
+test6.jpg,16,0,7,1,24,success,
+test7.jpg,62,4,4,1,71,success,
+test8.jpg,53,0,3,4,60,success,
+test9.jpg,53,0,3,3,59,success,

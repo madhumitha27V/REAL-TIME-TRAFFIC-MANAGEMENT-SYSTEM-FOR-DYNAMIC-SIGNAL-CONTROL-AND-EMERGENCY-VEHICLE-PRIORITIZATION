@@ -1,0 +1,11 @@
+image,car,motorcycle,bus,truck,total_vehicles,annotated_image
+test1.jpeg,2,0,1,0,3,test1_detected.jpg
+test10.jpg,67,0,2,1,70,test10_detected.jpg
+test2.jpg,16,2,0,1,19,test2_detected.jpg
+test3.jpg,7,0,0,5,12,test3_detected.jpg
+test4.jpg,23,0,1,1,25,test4_detected.jpg
+test5.jpg,32,0,3,3,38,test5_detected.jpg
+test6.jpg,16,0,7,1,24,test6_detected.jpg
+test7.jpg,62,4,4,1,71,test7_detected.jpg
+test8.jpg,53,0,3,4,60,test8_detected.jpg
+test9.jpg,53,0,3,3,59,test9_detected.jpg
