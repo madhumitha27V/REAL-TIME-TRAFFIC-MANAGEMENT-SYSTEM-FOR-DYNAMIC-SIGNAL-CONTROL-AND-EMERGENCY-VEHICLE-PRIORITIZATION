@@ -7,3 +7,5 @@
 node_modules/
 frontend/dist/
 data/results/*.log
+certs/
+schema.sql
