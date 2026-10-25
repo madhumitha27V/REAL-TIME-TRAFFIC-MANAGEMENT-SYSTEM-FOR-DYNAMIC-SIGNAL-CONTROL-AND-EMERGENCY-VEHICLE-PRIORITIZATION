@@ -4,3 +4,11 @@ __pycache__/
 *.pyc
 node_modules/
 .env.*
+
+# Database credentials and certificates
+
+certs/
+schema.sql
+
+# Generated simulation logs
+data/results/*.log
