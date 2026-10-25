@@ -1,15 +1,11 @@
-
 import os
+import shutil
 import traci
-
 from backend.database import get_db_connection
 
 SUMO_HOME = os.environ.get("SUMO_HOME")
 
-if not SUMO_HOME:
-    raise RuntimeError(
-        "SUMO_HOME is not set. Set it in PowerShell first."
-    )
+
 
 SUMO_CONFIG = os.path.abspath(
     "sumo/config/junction_traffic.sumocfg"
@@ -104,13 +100,20 @@ def main():
             f"SUMO configuration not found: {SUMO_CONFIG}"
         )
 
-    sumo_binary = os.path.join(SUMO_HOME, "bin", "sumo.exe")
+    sumo_binary = shutil.which("sumo")
 
-    if not os.path.isfile(sumo_binary):
+    if not sumo_binary and SUMO_HOME:
+        executable_name = "sumo.exe" if os.name == "nt" else "sumo"
+        candidate = os.path.join(SUMO_HOME, "bin", executable_name)
+
+        if os.path.isfile(candidate):
+            sumo_binary = candidate
+
+    if not sumo_binary:
         raise FileNotFoundError(
-            f"SUMO executable not found: {sumo_binary}"
+            "SUMO executable not found. Install SUMO and configure "
+            "SUMO_HOME or add the SUMO executable to PATH."
         )
-
     os.makedirs("data/results", exist_ok=True)
 
     seed = int(os.environ.get("SMARTFLOW_SEED", "1"))

@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+mysql-connector-python
+numpy
+opencv-python-headless
+ultralytics
+traci
+sumolib
